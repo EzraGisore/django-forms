@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<h1>Students</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{  students_form.as_p}}
+    <input type="submit" name="studentsbtn" value="CreateUser">
+</form>
+{% if submit_students_btn == "CreateUser" %}
+    {{ name }}
+    {{ gender }}
+    {{ school }}
+    {{ parent }}
+    {{ phone_number }}
+
+
+{% endif %}
+
+
+</body>
+</html>
