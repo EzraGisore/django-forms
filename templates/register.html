@@ -8,7 +8,14 @@
 <h1>Registration</h1>
 <form action="" method="POST">
     {% csrf_token %}
+    {{ rForm.as_p }}
     <input type="submit" name="register" value="Register">
+
 </form>
+{% if submit_btn == "Register" %}
+    {{ name }}
+    {{ email }}
+
+{% endif %}
 </body>
 </html>
